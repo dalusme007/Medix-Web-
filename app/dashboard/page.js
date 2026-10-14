@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/AuthProvider";
 import { getProfile } from "@/lib/services/profileService";
+import { LOGO_ICON } from "@/lib/constants/logo";
 import { getProgress, getGradeForXp } from "@/lib/services/progressService";
 import { signOut } from "@/lib/services/authService";
 
@@ -63,7 +64,7 @@ export default function DashboardPage() {
       <div className="max-w-2xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ background: "#123028", border: "1px solid #4FC3F7" }}>M</div>
+            <img src={LOGO_ICON} alt="Medix" className="w-9 h-9 rounded-full" />
             <div className="text-xl font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#4FC3F7" }}>MEDIX</div>
           </div>
           <div className="flex items-center gap-2 flex-wrap justify-end">
@@ -110,4 +111,4 @@ export default function DashboardPage() {
       </div>
     </div>
   );
-}
+    }
